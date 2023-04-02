@@ -1,0 +1,40 @@
+{
+  "name": "lucass-backend",
+  "version": "1.0.0",
+  "description": "the backend of lucass",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sasapapovic988/lucass-backend.git"
+  },
+  "keywords": [
+    "lucass",
+    "backend"
+  ],
+  "author": "CJ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sasapapovic988/lucass-backend/issues"
+  },
+  "homepage": "https://github.com/sasapapovic988/lucass-backend#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "gravatar": "^1.8.2",
+    "http": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.2",
+    "nodemon": "^2.0.21",
+    "openai": "^3.2.1",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1"
+  }
+}

@@ -1,0 +1,40 @@
+const express = require("express");
+const router = express.Router();
+
+const userRouter = require('./routes/userRouter');
+const blogRouter = require('./routes/blogRouter');
+const ecomRouter = require('./routes/ecomRouter');
+const videoRouter = require('./routes/videoRouter');
+const digitalRouter = require('./routes/digitalRouter');
+const personalRouter = require('./routes/personalRouter');
+const imageRouter = require('./routes/imageRouter');
+const profileRouter = require('./routes/profileRouter');
+const paymentsRouter = require('./routes/paymentsRouter');
+const langsRouter = require('./routes/langsRouter');
+const promptRouter = require('./routes/promptRouter');
+const categoryRouter = require('./routes/categoryRouter');
+const questionRouter = require('./routes/questionRouter');
+const engineRouter = require('./routes/engineRouter');
+const toneRouter = require('./routes/toneRouter');
+const subscriptionRouter = require('./routes/subscriptionRouter');
+const planRouter = require('./routes/planRouter');
+
+router.use('/api/users', userRouter);
+router.use('/api/blogs', blogRouter);
+router.use('/api/ecom', ecomRouter);
+router.use('/api/video', videoRouter);
+router.use('/api/digital', digitalRouter);
+router.use('/api/personal', personalRouter);
+router.use('/api/image', imageRouter);
+router.use('/api/profile', profileRouter);
+router.use('/api/payments', paymentsRouter);
+router.use('/api/langs', langsRouter);
+router.use('/api/prompts', promptRouter);
+router.use('/api/categories', categoryRouter);
+router.use('/api/questions', questionRouter);
+router.use('/api/engines', engineRouter);
+router.use('/api/tones', toneRouter);
+router.use('/api/subscriptions', subscriptionRouter);
+router.use('/api/plans', planRouter);
+
+module.exports = router;
