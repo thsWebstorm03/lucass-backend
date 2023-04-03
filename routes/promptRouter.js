@@ -11,6 +11,7 @@ router.get("/getlogs", passport.authenticate("jwt", {session : false}), promptCo
 router.get("/getlogbyId", passport.authenticate("jwt", {session : false}), promptController.getlogbyId);
 
 router.post('/addlog', passport.authenticate("jwt", {session : false}), promptController.addlog);
+router.post('/deletelog', passport.authenticate("jwt", {session : false}), promptController.deletelog);
 
 router.post('/addSample', promptController.addSample);
 

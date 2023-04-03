@@ -72,9 +72,24 @@ const addSample = (req, res) => {
 
 }
 
+const deletelog = (req, res) => {
+   
+   const {id} = req.body;
+   console.log(id, 'id')
+   const condition = id == -1 ? {user : req.user.id} : {user : req.user.id, _id : id} ;
+
+   PrommptLog
+      .updateMany(condition, {isDeleted : true})
+      .then(result => {
+         res.json({msg : "success"})
+      })
+      .catch(err => res.status(500).json({msg : err.message}))
+}
+
 module.exports = {
    getlogs,
    getlogbyId,
    addlog,
-   addSample
+   addSample,
+   deletelog
 }
