@@ -7,6 +7,7 @@ const passport = require('passport');
 const User = require("../models/users");
 
 const doLogin = (req, res) => {
+   console.log(req.body, 'body')
    const errors = {};
    const email = req.body.email;
    const password = req.body.password;
