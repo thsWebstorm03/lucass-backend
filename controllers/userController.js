@@ -94,6 +94,7 @@ const doRegister = (req, res) => {
 };
 
 const getCurrent = (req, res) => {
+   if(!req.user) return res.status(401).json({msg : "Unauthorized"});
    res.json({id: req.user._id, username: req.user.username, email: req.user.email, role: req.user.role, password: req.user.password});
 }
 
@@ -103,7 +104,6 @@ const profile = (req, res) => {
 
 const setLang = (req, res) => {
    const {lang} = req.body;
-   console.log(lang, 'current');
    
    User
       .findById(req.user.id)

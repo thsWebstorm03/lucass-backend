@@ -12,7 +12,7 @@ const getAll = (req, res) => {
    Tone
       .find()
       .then(tones => {
-         if(!tones) res.json([]);
+         if(!tones) return res.json([]);
          res.json({tones: tones})
 
       })

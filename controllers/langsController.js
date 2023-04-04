@@ -12,7 +12,7 @@ const getlangs = (req, res) => {
    Lang
       .find()
       .then(langs => {
-         if(!langs) res.json([]);
+         if(!langs) return res.json([]);
          res.json({langs: langs})
 
       })

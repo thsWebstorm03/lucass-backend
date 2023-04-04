@@ -7,7 +7,7 @@ const getAll = (req, res) => {
    Question
       .find({isDeleted : false})
       .then(result => {
-         if(!result) res.json([]);
+         if(!result) return res.json([]);
          res.json({questions: result})
 
       })

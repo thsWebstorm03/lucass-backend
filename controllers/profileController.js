@@ -3,7 +3,6 @@ const User = require("../models/users");
 
 const updateProfile = (req, res) => {
    const {name, email} = req.body;
-   console.log(req.user, 'user')
 
    User
       .findOne({email : req.user.email})
@@ -22,7 +21,6 @@ const updateProfile = (req, res) => {
 const updatePassword = (req, res) => {
    
    const {newPass} = req.body;
-   console.log(req.user, 'user')
 
    User
       .findOne({email : req.user.email})
@@ -46,7 +44,6 @@ const updatePassword = (req, res) => {
 const deleteAccount = (req, res) => {
    
    const {newPass} = req.body;
-   console.log(req.user, 'user')
 
    User
       .findOneAndRemove({email : req.user.email})

@@ -11,11 +11,10 @@ const Prompt = require("../models/prompts");
 
 const getlogs = (req, res) => {
 
-   console.log(req.user, 'user')
    PrommptLog
-      .find({user : req.user.id})
+      .find({user : req.user.id, isDeleted : false})
       .then(logs => {
-         if(!logs) res.json([]);
+         if(!logs) return res.json([]);
          res.json({logs: logs})
 
       })
@@ -31,7 +30,7 @@ const getlogbyId = (req, res) => {
    PrommptLog
       .findOne({user : req.user.id, _id:pId})
       .then(logs => {
-         if(!logs) res.json([]);
+         if(!logs) return res.json([]);
          res.json({logs: logs})
 
       })

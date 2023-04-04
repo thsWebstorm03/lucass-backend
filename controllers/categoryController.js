@@ -7,7 +7,7 @@ const getAll = (req, res) => {
    Category
       .find({isDeleted : false})
       .then(result => {
-         if(!result) res.json([]);
+         if(!result) return res.json([]);
          res.json({categories: result})
 
       })

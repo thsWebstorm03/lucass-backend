@@ -12,7 +12,7 @@ const getAll = (req, res) => {
    Engine
       .find()
       .then(engines => {
-         if(!engines) res.json([]);
+         if(!engines) return res.json([]);
          res.json({engines: engines})
 
       })

@@ -15,7 +15,7 @@ const getlogs = (req, res) => {
    PayLog
       .find({userId : req.user.id})
       .then(logs => {
-         if(!logs) res.json([]);
+         if(!logs) return res.json([]);
          res.json({logs: logs})
 
       })
